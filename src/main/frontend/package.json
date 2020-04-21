@@ -18,7 +18,7 @@
     "fastclick": "^1.0.6",
     "flux": "^2.0.3",
     "grid-list": "^0.1.1",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "moment": "^2.8.4",
     "object-assign": "^3.0.0",
     "q": "^1.4.1",
