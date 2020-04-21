@@ -1,0 +1,24 @@
+<!-- Start of separator -->
+<table width="100%" bgcolor="#ffffff" $tableBasic id="backgroundTable" st-sortable="seperator">
+    <tbody>
+    <tr>
+        <td>
+            <table width="$outerWidth" align="center" $tableBasic class="devicewidth">
+                <tbody>
+                <tr>
+                    <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="$innerWidth" align="center" height="1" bgcolor="$lightGrayColor"
+                        style="font-size:1px; line-height:1px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!-- End of separator -->

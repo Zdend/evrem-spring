@@ -1,0 +1,124 @@
+@import "variables";
+@import "mixins";
+
+html{
+	overflow-y: auto;
+	body{
+		background: url(../images/title-background3.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+}
+#login-container{
+	min-height: 690px;
+	
+	.lg-centered-box{
+	  	width: 40%;
+	  	min-width: 350px;
+		min-height: 50%;
+		padding: 1em;
+		margin: auto;
+		text-align: center;
+		
+		.lg-login-wrapper{
+			min-height:400px;
+			background-color: rgba(255,255,255, 0.8);
+			padding: 3.5em 1em;
+			text-align: left;
+			.lg-login-inner{
+				margin: auto;
+				width: 276px;
+				
+				h2{
+					font-size: 1.5em;
+					line-height: 20px;
+					margin: 0 0 1em 0;
+					font-weight: 200;
+				}
+			}
+		}
+		.lg-login-block{
+			.lg-login-btn{
+				float: left;
+			}
+			.lg-remember-forgotten{
+				float: right;
+				text-align: right;
+				margin-left: 1em;
+				li{
+					list-style-type: none;
+					font-size: 14px;
+				  	height: 14px;
+					span{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+        .lg-social-login-block{
+          span {
+            color: $navyBlue;
+            font-size: 3em;
+            margin: 0 0.55em;
+          }
+        }
+		
+		input[type="text"],input[type="password"]{
+			color: $navyBlue;
+            background-color: white;
+		  	border: 1px solid $lightGrayColor;
+		  &:focus{
+			border: 2px solid $navyBlue;
+		  }
+		}
+		
+		.lg-header-wrapper{
+			display: table;
+
+			.lg-header-logo{
+				background: transparent url(../images/evrem-bird-logo70.png) no-repeat;
+				width: 70px;
+				height: 70px;
+				margin: 0 auto 1em auto;
+			}
+			
+			.lg-title-welcome{
+				font-weight: 300;
+				margin-bottom: 0.4em;
+				text-shadow: 1px, 1px, 7px, $navyBlue;
+			}
+			.lg-title-description{
+				font-size: 1.4em;
+				line-height: 30px;
+			  	text-shadow: 1px, 1px, 7px, $navyBlue;
+			}
+		}
+		.lg-desc-bold{
+			font-weight: 600;
+		}
+
+		.lg-footer-wrapper{
+			margin-top: 1em;
+		}
+		
+		
+	}
+	
+}
+#lg-signup-captcha{
+	width: 310px;
+}
+.lg-registration-confirmation{
+	text-align: left;
+	.modal-body{
+		width: 340px;
+		margin: 0 auto;
+		h4{
+			margin: 1em 0;
+			font-weight: 200;
+			font-size: 20px;
+		}
+	}
+	#timezone-select{
+		height: 43px;
+	}
+}

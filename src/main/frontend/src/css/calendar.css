@@ -1,0 +1,63 @@
+@import "variables";
+@import "mixins";
+
+#calendar-container {
+  #calendar {
+    .fc-content {
+      color: white;
+    }
+    .fc-button {
+      border: none;
+      background-color: $navyBlue;
+      color: white;
+      text-decoration: none;
+      text-shadow: none;
+      @mixin hover-transition;
+
+      &:hover, &:focus {
+        color: white;
+        @mixin hover-transition;
+      }
+    }
+    .fc-corner-left, .fc-corner-right {
+      border-radius: 0;
+    }
+    .fc-state-hover {
+      background-color: color($navyBlue l(10%));
+    }
+    .fc-state-default {
+      background-image: none;
+    }
+    .fc-state-active {
+      background-color: color($navyBlue b(10%));
+    }
+    .fc-toolbar button {
+      height: 100%;
+      padding: 10px 15px;
+    }
+    .fc-event {
+      border-radius: 0;
+      margin: 0
+    }
+    .fc-time-grid-event .fc-bg {
+      background-color: transparent;
+    }
+    .fc-basicWeek-view, .fc-month-view {
+      td.fc-day:hover {
+        background-color: color($navyBlue l(50%));
+        cursor: pointer;
+      }
+    }
+    .fc-day-header {
+      background-color: $navyBlue;
+      font-size: 25px;
+      padding: 13px 0;
+      color: white;
+
+    }
+    .fc-more {
+      color: $navyBlue;
+    }
+  }
+
+}

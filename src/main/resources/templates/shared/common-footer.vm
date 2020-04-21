@@ -1,0 +1,29 @@
+<table width="100%" bgcolor="#ffffff" $tableBasic id="backgroundTable" st-sortable="postfooter">
+    <tbody>
+    <tr>
+        <td>
+            <table width="600" $tableBasic align="center" class="devicewidth">
+                <tbody>
+                <tr>
+                    <td width="100%">
+                        <table width="600" $tableBasic align="center" class="devicewidth">
+                            <tbody>
+                            <tr>
+                                <td align="center" valign="middle" $footerTextStyle st-content="postfooter">
+                                    <a href="www.evrem.net" style="text-decoration: none; color: $rudeColor">www.evrem.net</a>
+                                </td>
+                                <td align="center" valign="middle" $footerTextStyle st-content="postfooter">
+                                    Click here to <a href="#" style="text-decoration: none; color: $rudeColor">Unsubscribe</a>
+                                </td>
+                            </tr>
+                                #parse("partials/spacer-row.vm")
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,98 @@
+@import 'variables';
+@import 'mixins';
+/* ---------- Common ---------- */
+.cleaner {
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+.hide {
+  @mixin hide;
+}
+
+.nocursor {
+  cursor: default !important;
+}
+
+.pointer-cursor {
+  cursor: pointer !important;
+}
+
+.invisible {
+  @mixin hide;
+  visibility: hidden;
+  opacity: 0;
+  transition: all, 0.7s, ease-in-out, 0s;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity, 0.7s, ease-in-out;
+}
+
+.hover-transition {
+  @mixin hover-transition;
+}
+
+.striked-text {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@keyframes flash {
+  0%, 50%, 100% {opacity: 1;}
+  25%, 75% {opacity: 0.3;}
+}
+.flash-highlight {
+  animation-name: flash;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* ---------- Spinner ---------- */
+$spinkit-spinner-margin: 30vh auto;
+$spinkit-spinner-color: white;
+
+.spinner {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3000;
+  opacity: 0.97;
+  animation-play-state: paused;
+  display: none;
+
+  &.active {
+    animation-play-state: running;
+    display: block;
+  }
+
+  .spinner-square {
+    width: 80px;
+    height: 80px;
+    background-color: $spinkit-spinner-color;
+
+    margin: $spinkit-spinner-margin;
+    animation: sk-rotatePlane 1.2s infinite ease-in-out;
+  }
+}
+
+@keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

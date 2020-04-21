@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Evrem email</title>
+
+    #parse("shared/style-variables.vm")
+
+</head>
+
+<body>
+    #parse("shared/common-header.vm")
+    #parse("shared/partials/separator.vm")
+<!-- body -->
+<table width="100%" bgcolor="#ffffff" $tableBasic id="backgroundTable" st-sortable="full-text">
+    <tbody>
+    <tr>
+        <td>
+            <table width="$outerWidth" $tableBasic align="center" class="devicewidth">
+                <tbody>
+                <tr>
+                    <td width="100%">
+                        <table width="$outerWidth" $tableBasic align="center" class="devicewidth">
+                            <tbody>
+                                #parse("shared/partials/spacer-row.vm")
+                            <tr>
+                                <td>
+                                    <table width="$innerWidth" align="center" $tableBasic class="devicewidthinner">
+                                        <tbody>
+                                        <!-- Title -->
+                                        <tr>
+                                            <td $titleTextStyle st-title="fulltext-heading" align="center">
+                                                $subject
+                                            </td>
+                                        </tr>
+                                        <!-- End of Title -->
+                                            #parse("shared/partials/spacer-row.vm")
+                                        <!-- content -->
+                                        <tr>
+                                            <td st-content="fulltext-content">
+                                                #parse($screen_content)
+                                            </td>
+                                        </tr>
+                                        <!-- End of content -->
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                                #parse("shared/partials/spacer-row.vm")
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+    #parse("shared/partials/separator.vm")
+    #parse("shared/common-footer.vm")
+</body>
+</html>

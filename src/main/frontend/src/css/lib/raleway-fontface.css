@@ -1,0 +1,24 @@
+$raleway-font-path: ../fonts/raleway;
+
+@define-mixin raleway-font $type, $weight {
+    @font-face {
+        font-family: 'Raleway';
+        src: url('$(raleway-font-path)/Raleway-$(type).ttf') format('truetype');
+        font-weight: $weight;
+    }
+}
+
+@define-mixin raleway-font-pair $type, $weight {
+    @mixin raleway-font $type, $weight;
+}
+
+@mixin raleway-font-pair Thin, 100;
+@mixin raleway-font-pair ExtraLight, 200;
+@mixin raleway-font-pair Light, 300;
+@mixin raleway-font-pair Regular, 400;
+@mixin raleway-font-pair Medium, 500;
+@mixin raleway-font-pair SemiBold, 600;
+@mixin raleway-font-pair Bold, 700;
+@mixin raleway-font-pair ExtraBold, 800;
+@mixin raleway-font-pair Heavy, 900;
+

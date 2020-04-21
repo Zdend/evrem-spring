@@ -1,0 +1,159 @@
+@import 'variables';
+@import 'mixins';
+@import 'lib/libs';
+@import 'common';
+
+/* ---------- Base styles ---------- */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: $baseFontFamily;
+  color: $grayColor;
+  background-color: transparent;
+  @mixin selection {
+    color: white;
+    background: $grayColor;
+  }
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+#wrapper {
+  padding: 0 5em 0;
+  min-width: 960px;
+}
+/* ---------- Header ---------- */
+
+#heading {
+  user-select: none;
+  font-size: 40px;
+  .site-title {
+    float: left;
+  }
+
+  @define-mixin active-a{
+    background-color: $yellowColor;
+    color: white;
+  }
+  .active-a {
+    @mixin active-a;
+  }
+
+  #navigation {
+    ul {
+      list-style-type: none;
+      font-weight: 100;
+      margin: auto;
+      text-align: center;
+      li {
+        margin-top: 0.5em;
+        display: inline-block;
+        cursor: pointer;
+        a {
+          color: $rudeColor;
+          text-decoration: none;
+          padding: 10px;
+          border: 1px solid $backgroundColor;
+          @mixin fast-transition;
+
+          &:focus, &:hover, &.active {
+            @mixin active-a;
+          }
+        }
+      }
+      .selected a {
+        @mixin active-a;
+      }
+    }
+
+  }
+  .profile-link-container {
+    margin: 0.3em 1em 0 0;
+    float: right;
+
+    &:hover #profile-link-inner{
+      @mixin active-a;
+    }
+
+    #profile-link-inner {
+      color: $rudeColor;
+      padding: 8px 20px;
+      @mixin fast-transition;
+      &:focus, &:hover, &.selected {
+        @mixin active-a;
+      }
+    }
+    .profile-dropdown{
+      font-size: 15px;
+      position: absolute;
+      right: 115px;
+      display: none;
+      opacity: 0;
+      list-style-type: none;
+      @mixin fast-transition;
+      z-index: 2;
+      a{
+        color: white;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      li{
+        background-color: $yellowColor;
+        width: 200px;
+        padding: 15px 40px;
+        cursor: pointer;
+        @mixin fast-transition;
+        &:hover{
+          background-color: $navyBlue;
+        }
+      }
+    }
+    &:hover .profile-dropdown{
+      display: block;
+      opacity: 1;
+    }
+  }
+
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  font-weight: 300;
+  color: $mediumGrayColor;
+  a {
+    color: $mediumGrayColor;
+    margin-right: 15px;
+    &:focus, &:hover {
+      color: $grayColor;
+    }
+  }
+  #left-footer-container {
+    float: left;
+  }
+  #right-footer-container {
+    float: right;
+    span {
+      color: $lightGrayColor;
+      font-size: 40px;
+      margin-left: 25px;
+      @mixin hover-transition;
+
+      &.fa-facebook:hover {
+        color: #3c599f;
+        @mixin hover-transition;
+      }
+      &.fa-twitter:hover {
+        color: #00acee;
+        @mixin hover-transition;
+      }
+      &.fa-google-plus:hover {
+        color: #d82a21;
+        @mixin hover-transition;
+      }
+    }
+  }
+}

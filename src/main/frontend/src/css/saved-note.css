@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixins";
+
+#savednote-container {
+  cursor: default;
+    .sn-grid-wrapper{
+      color: white;
+      .sn-grid-container {
+        height: 100%;
+        overflow: hidden;
+
+        .sn-inner-note-container {
+          padding: 15px;
+          word-wrap: break-word;
+          white-space: pre;
+        }
+        .sn-actions-container {
+          float: right;
+          .sn-action-button {
+            width: 15px;
+            height: 15px;
+            margin: 3px;
+            color: transparent;
+            display: none;
+            cursor: pointer;
+            @mixin hover-transition;
+            &:hover {
+              color: $lightGrayColor !important;
+            }
+          }
+          .sn-icon{
+            position: relative;
+            right: 0px;
+            font-size: 1.85em;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding-top: 5px;
+            margin-left: 5px;
+          }
+        }
+        &:hover {
+          .sn-actions-container {
+            position: absolute;
+            right: 0;
+            background-color: inherit;
+            opacity: 0.9;
+            width: 50px;
+            .sn-action-button {
+              @mixin hover-transition;
+              float: right;
+              display: block;
+              color: white;
+              z-index: 10;
+            }
+            .sn-checked-btn {
+              color: $greenColor;
+            }
+            .sn-icon{
+              display: none;
+            }
+          }
+        }
+
+        .sn-check-btn {
+          @mixin hover-transition;
+          cursor: pointer;
+          margin-right: 5px;
+          float: left;
+          position: relative;
+          top: 1px;
+
+          &:hover {
+            color: $greenColor;
+          }
+        }
+
+        .sn-todo-text {
+          margin-left: 20px;
+        }
+      }
+  }
+}
+

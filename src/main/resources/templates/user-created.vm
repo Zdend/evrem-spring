@@ -1,0 +1,25 @@
+<table width="$innerWidth" align="center" $tableBasic class="devicewidthinner">
+    <tbody>
+    <tr>
+        <td $labelTextStyle align="center">You will never forget anything with this event reminding app.</td>
+    </tr>
+    <tr>
+        <td $plainTextStyle align="center">Create notes, organise them on your wall, todo list, reminding events and
+            others!
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+#parse("shared/partials/spacer-table.vm")
+
+<span $labelTextStyle>Login</span>
+<p $plainTextStyle>$login</p>
+#parse("shared/partials/spacer-table.vm")
+
+<span $labelTextStyle>Timezone</span>
+<p $plainTextStyle>$timezone</p>
+#parse("shared/partials/spacer-table.vm")
+
+<p $footerTextStyle>It is important to set your timezone properly. Your event notification will be sended in timezone
+    you selected.</p>

@@ -1,0 +1,83 @@
+@import "variables";
+@import "mixins";
+
+
+/* Bootstrap modification */
+.btn,.form-control, .input-group-addon{
+  border-radius: 0;
+  border-width: 0;
+  appearance: none;
+}
+.form-control:focus{
+  border-width: 2px;
+}
+.popover{
+  border-radius: 0;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group{
+  margin-left: 0;
+  height: 43px;
+}
+select[size="1"] {
+  height: 43px;
+}
+.form-control, input{
+  background-color: $inputBackgroundColor;
+  &:focus{
+    background-color: white;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: $baseFontFamily;
+}
+.tooltip-inner{
+  border-radius: 0;
+  background-color: $navyBlue;
+}
+.tooltip.top .tooltip-arrow{
+  border-top-color: $navyBlue;
+}
+/* Bootstrap datetimepicker modification */
+.bootstrap-datetimepicker-widget{
+  &,table td, table th, table td span {
+    border-radius: 0;
+  }
+  a{
+    color: $blueColor;
+  }
+}
+/* React-resize */
+.react-resizable {
+  position: relative;
+}
+.react-draggable-active {
+  user-select: none;
+}
+.react-grid-item:hover{
+  .react-resizable-handle.react-draggable{
+    @mixin font-icon;
+    font-size: 12px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-position: bottom right;
+    padding: 0 3px 3px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    box-sizing: border-box;
+    cursor: se-resize;
+    &:before{
+      content: "\f065";
+    }
+  }
+}
+.modal-header{
+  background-color: $navyBlue;
+  color: white;
+}
+.modal{
+  .close{
+    color: white;
+  }
+}

@@ -1,0 +1,27 @@
+/* ---------- CSS MIXINS ---------- */
+@define-mixin hover-transition {
+transition: all 0.5s ease-in-out;
+}
+@define-mixin fast-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@define-mixin selection {
+  ::selection {
+    @mixin-content;
+  }
+}
+@define-mixin hide{
+  position: absolute;
+  top: 9999px;
+  right: 9999px;
+}
+@define-mixin font-icon{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}

@@ -1,0 +1,40 @@
+<span $labelTextStyle>Note text</span>
+#if(!$null.isNull($note.todos) && $note.todos.size() > 0)
+    #foreach( $todo in $note.todos )
+    <p $plainTextStyle>$todo.text</p>
+    #end
+#else
+<p $plainTextStyle>$note.text</p>
+#end
+#parse("shared/partials/spacer-table.vm")
+
+<span $labelTextStyle>Color</span>
+<table width="$innerWidth" align="center" $tableBasic class="devicewidthinner">
+    <tbody>
+    <tr>
+        <td height="50" width="100%" bgcolor="$note.color"></td>
+    </tr>
+    </tbody>
+</table>
+
+#parse("shared/partials/spacer-table.vm")
+
+<table width="$innerWidth" align="center" $tableBasic class="devicewidthinner">
+    <tbody>
+    <tr>
+        <td $labelTextStyle>Remind date</td>
+        <td $labelTextStyle>Event date</td>
+        <td $labelTextStyle>Created date</td>
+    </tr>
+    <tr>
+        <td $plainTextStyle>$note.remindTime</td>
+        <td $plainTextStyle>$note.eventTime</td>
+        <td $plainTextStyle>$note.createdDate</td>
+    </tr>
+    </tbody>
+</table>
+	
+
+
+
+

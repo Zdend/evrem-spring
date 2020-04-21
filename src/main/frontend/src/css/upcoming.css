@@ -1,0 +1,81 @@
+@import "variables";
+@import "mixins";
+
+#upcoming-container{
+  @media (min-width: 1200px) {
+	div:first-of-type {
+	  padding-left: 0;
+	}
+	div:last-of-type {
+	  padding-right: 0;
+	}
+  }
+  table{
+	  table-layout: fixed;
+	  width: 100%;
+	  tr:hover{
+		  td:not(:last-of-type){
+			  background-color: $lightGrayColor;
+			  cursor: pointer;
+		  }
+	  }
+  }
+
+  .uc-check-btn{
+	  @mixin hover-transition;
+	  cursor: pointer;
+	  padding-left: 15px;
+	  &:hover{
+		  color: $rudeColor;
+	  }
+  }
+
+  .uc-checked-btn:hover{
+	  color: $greenColor;
+  }
+  @media (min-width: 1200px){
+	.uc-date-col{
+	  width: 25%;
+	  min-width:83px;
+	}
+	.uc-time-col{
+	  width: 9%;
+	  min-width: 32px;
+	}
+	.uc-text-col{
+	  width: 68%;
+	  overflow: hidden;
+	}
+	.uc-check-col{
+	  width: 3%;
+	}
+  }
+  @media (max-width: 1200px){
+	.uc-date-col,.uc-time-col{
+	  width: 15%;
+	  min-width:83px;
+	}
+
+	.uc-text-col{
+	  width: 78%;
+	  overflow: hidden;
+	}
+	.uc-check-col{
+	  width: 3%;
+	}
+  }
+
+
+  .uc-text-cell{
+	  overflow: hidden;
+	  white-space: pre;
+  }
+
+
+  .uc-more-btn{
+	  margin-top: 1em;
+	  width: 100%;
+
+  }
+
+}

@@ -1,0 +1,80 @@
+@import "variables";
+@import "mixins";
+
+#filter-container{
+	.fr-data-grid{
+		table-layout: fixed;
+		width:100%;
+		td{
+			min-width: 1em;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    padding: 0;
+		    &:not(:first-of-type){
+		    	padding-left: 0.5em
+		    }
+		}
+		th{
+			font-weight: 400;
+			color: white;
+			background-color: $navyBlue;
+			padding: 0.6em 0.5em;
+			text-align: center;
+		}
+		.fr-grid-body tr:hover{
+			background-color: $lightGrayColor;
+		}
+		.fluid-cell{
+		
+		}
+	}
+	.fr-color-cell{
+		height: 2em;
+		text-align: center;
+	  span {
+		color: white;
+		vertical-align: bottom;
+	  }
+	}
+	.fr-text-cell{
+	}
+	.fr-action-cell{
+		i{
+			padding: 0 0.2em;
+		}
+	}
+	
+	.fr-centered-align{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.fr-color-th{
+		width: 2em;
+	}
+	.fr-boolean-th{
+		width: 4em;
+	}
+	.fr-date-th{
+		width: 9em;
+	}
+	.fr-actions-th{
+		width: 3.4em;
+	}
+	
+	.fr-variable-actions{
+		margin-top: 2em;
+		float: right;
+		button{
+			margin-left: 1em;
+		}
+	}
+	.fr-more-btn{
+		width: 100%;
+		
+	}
+	
+}
+
+.fr-empty-trash-confirmation{
+	
+}
